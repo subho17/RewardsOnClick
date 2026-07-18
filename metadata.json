@@ -1,0 +1,6 @@
+{
+  "name": "RewardsOnClick",
+  "description": "Premium B2B rewards and recognition landing platform from the creators of GiftsOnClick.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

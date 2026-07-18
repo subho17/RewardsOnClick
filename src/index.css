@@ -1,0 +1,422 @@
+@import "tailwindcss";
+
+:root {
+  --bg:          #FFFFFF;
+  --bg-soft:     #FBF6F5;
+  --ink:         #1A1414;
+  --body:        #5A5252;
+  --primary:     #C41E3A;
+  --primary-dark:#8C1327;
+  --primary-tint:#FCEAEC;
+  --gold:        #C9A24B;
+  --border:      #F0E2E0;
+  --radius:      18px;
+}
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-ink: var(--ink);
+  --color-body-text: var(--body);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-tint: var(--primary-tint);
+  --color-gold: var(--gold);
+  --color-border-custom: var(--border);
+  --radius-custom: var(--radius);
+}
+
+/* Custom Base Classes */
+.font-heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Scroll progress indicator at top of page */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--gold) 50%, var(--primary-dark) 100%);
+  z-index: 100;
+  width: 0%;
+  pointer-events: none;
+}
+
+/* Button shine sweep and hover interactions */
+.btn-primary, .goc-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after, .goc-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.35) 50%, transparent 60%);
+  transform: skewX(-20deg);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after, .goc-btn:hover::after {
+  transform: translateX(240%) skewX(-20deg);
+}
+
+/* Icon micro-motion */
+.btn-primary svg, .btn-ghost svg, .goc-btn svg {
+  transition: transform 0.3s cubic-bezier(.22, 1, .36, 1);
+}
+
+.btn-primary:hover svg, .btn-ghost:hover svg, .goc-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* Custom radial highlight sheen for tilted cards */
+.tilt-large, .tilt-small {
+  position: relative;
+  overflow: hidden;
+}
+
+.tilt-large::before, .tilt-small::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle 220px at var(--mx, 0px) var(--my, 0px),
+    rgba(196, 30, 58, 0.08),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tilt-large:hover::before, .tilt-small:hover::before {
+  opacity: 1;
+}
+
+/* Ambient background drift animations */
+@keyframes ambientDrift1 {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(25px, -20px) rotate(3deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+@keyframes ambientDrift2 {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(-30px, 25px) rotate(-3deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+
+.blob1 {
+  animation: ambientDrift1 12s ease-in-out infinite;
+}
+
+.blob2 {
+  animation: ambientDrift2 14s ease-in-out infinite;
+}
+
+.goc-blob1 {
+  animation: ambientDrift2 10s ease-in-out infinite;
+}
+
+.goc-blob2 {
+  animation: ambientDrift1 11s ease-in-out infinite;
+}
+
+@keyframes programGlowDrift1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(45px, 25px) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes programGlowDrift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-35px, -35px) scale(1.12); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.programs-glow1 {
+  animation: programGlowDrift1 15s ease-in-out infinite;
+}
+
+.programs-glow2 {
+  animation: programGlowDrift2 18s ease-in-out infinite;
+}
+
+/* Marquee focus-ring hover effect */
+.marquee-track:hover .marquee-logo {
+  opacity: 0.35;
+  filter: grayscale(1);
+  transform: scale(0.95);
+}
+
+.marquee-track .marquee-logo {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee-track .marquee-logo:hover {
+  opacity: 1 !important;
+  filter: grayscale(0) !important;
+  transform: scale(1.08) !important;
+  color: #C41E3A !important;
+}
+
+/* Navbar Scrolled State */
+.navbar-el {
+  transition: padding 0.4s cubic-bezier(.22,1,.36,1), 
+              background-color 0.4s cubic-bezier(.22,1,.36,1), 
+              backdrop-filter 0.4s cubic-bezier(.22,1,.36,1), 
+              box-shadow 0.4s cubic-bezier(.22,1,.36,1);
+}
+.navbar-el.scrolled {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(30, 10, 10, 0.05);
+}
+
+/* Button hover micro-interactions */
+.btn-pill {
+  border-radius: 100px;
+  transition: transform 0.4s cubic-bezier(.22,1,.36,1), 
+              box-shadow 0.4s cubic-bezier(.22,1,.36,1), 
+              background-color 0.4s cubic-bezier(.22,1,.36,1),
+              filter 0.4s cubic-bezier(.22,1,.36,1);
+}
+.btn-pill:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(196, 30, 58, 0.25);
+}
+.btn-pill-gold:hover {
+  box-shadow: 0 14px 28px rgba(201, 162, 75, 0.25) !important;
+}
+
+/* Spotlight dynamic cards with hover-glow radial border & interior glow */
+.spotlight-card {
+  position: relative;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: #FFFFFF;
+  transition: transform 0.4s cubic-bezier(.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: radial-gradient(350px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(196, 30, 58, 0.35), transparent 80%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(350px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(196, 30, 58, 0.05), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.spotlight-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(196, 30, 58, 0.15);
+  box-shadow: 0 24px 48px rgba(30, 10, 10, 0.08);
+}
+.spotlight-card:hover::before,
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+/* Force absolute positioning for the stacking team deck — spotlight-card's
+   own "position: relative" would otherwise win and break the stack */
+.reveal-team-stack.spotlight-card {
+  position: absolute !important;
+}
+
+/* Card hover micro-interactions */
+.hover-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: #FFFFFF;
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), 
+              box-shadow 0.35s cubic-bezier(.22,1,.36,1), 
+              border-color 0.35s cubic-bezier(.22,1,.36,1);
+}
+.hover-card:hover {
+  transform: translateY(-8px);
+  border-color: transparent;
+  box-shadow: 0 24px 48px rgba(30, 10, 10, 0.08);
+}
+
+/* Program Card top gradient bar */
+.program-card {
+  position: relative;
+  overflow: hidden;
+}
+.program-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+.program-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Nav Link growing underline */
+.nav-link {
+  position: relative;
+  transition: color 0.35s cubic-bezier(.22,1,.36,1);
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.35s cubic-bezier(.22,1,.36,1);
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Infinite Marquee */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Custom styles for steps fill */
+#stepsFill {
+  transition: width 0.1s linear;
+}
+
+/* Accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}
+
+/* Custom Cursor: precise dot + lagging ring. Only on devices with a real mouse. */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button {
+    cursor: none;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.06s linear;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(196, 30, 58, 0.45);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-cursor-ring.cursor-is-hovering {
+  width: 60px;
+  height: 60px;
+  background: rgba(196, 30, 58, 0.06);
+  border-color: var(--primary);
+}
+
+.custom-cursor-dot.cursor-is-hovering {
+  opacity: 0;
+}
+
