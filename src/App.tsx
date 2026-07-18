@@ -26,7 +26,7 @@ import {
   WHY_US_DATA,
   TEAM_DATA
 } from "./data";
-const heroVideoSrc = "/assets/hero.mp4";
+const heroVideoSrc = "/assets/generate_hero_section_video_fo.mp4";
 
 export default function App() {
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -880,9 +880,9 @@ export default function App() {
         <div className="flex items-center">
           <a href="#hero" className="flex items-center">
             <img
-              src="/assets/logo.png"
-              alt="RewardsOnClick"
-              className="h-20 md:h-24 w-auto object-contain"
+              src="/goclogo.png"
+              alt="GiftsOnClick"
+              className="h-16 md:h-20 w-auto object-contain scale-[1.5] md:scale-[1.8] origin-left"
             />
           </a>
         </div>
@@ -996,7 +996,7 @@ export default function App() {
         />
 
         {/* Subtle high-contrast white gradient overlay to guarantee perfect text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70 md:to-white/50 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/60 to-white/30 md:to-transparent z-0"></div>
 
         {/* Parallax Blobs behind content */}
         <div className="blob1-wrap absolute top-[10%] right-[10%] w-[500px] h-[500px] pointer-events-none z-0">
@@ -1139,12 +1139,12 @@ export default function App() {
             {/* GiftsOnClick */}
             <div className="bg-white rounded-3xl border border-[#F0E2E0] p-10 shadow-sm">
 
-              <div className="h-48 mb-">
-                <img src="/goclogo.png" alt="GiftsOnClick Logo" className="h-full w-auto object-contain" />
+              <div className="h-33 mb-">
+                <img src="/logo.jpg(1).jpeg" alt="GiftsOnClick Logo" className="h-full w-auto object-contain" />
               </div>
 
               <h3 className="text-3xl font-bold text-[#1A1414] mb-4">
-                Gifts-On-Click
+
               </h3>
 
               <p className="text-[#5A5252] leading-8 mb-8">
