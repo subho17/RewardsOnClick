@@ -48,12 +48,12 @@ export interface TeamGroup {
 }
 
 export const TRUST_LOGOS = [
-  { name: "HUL", logoText: "Hindustan Unilever" },
-  { name: "SBI", logoText: "State Bank of India" },
-  { name: "Mahindra", logoText: "Mahindra Group" },
-  { name: "Vi", logoText: "Vodafone Idea" },
-  { name: "Fortis", logoText: "Fortis Healthcare" },
-  { name: "Glenmark", logoText: "Glenmark Pharmaceuticals" }
+  { name: "HUL", logoText: "Hindustan Unilever", logoSrc: "/assets/hindustanunilever.jpeg" },
+  { name: "SBI", logoText: "State Bank of India", logoSrc: "/assets/sbi.jpeg" },
+  { name: "Mahindra", logoText: "Mahindra Group", logoSrc: "/assets/mahindra.png" },
+  { name: "Vi", logoText: "Vodafone Idea", logoSrc: "/assets/vodaphone.png" },
+  { name: "Fortis", logoText: "Fortis Healthcare", logoSrc: "/assets/fortis.png" },
+  { name: "Glenmark", logoText: "Glenmark Pharmaceuticals", logoSrc: "/assets/glenmark.png" },
 ];
 
 export const STATS_DATA: StatItem[] = [

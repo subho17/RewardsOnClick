@@ -1576,20 +1576,28 @@ export default function App() {
         </div>
 
         {/* Marquee Track Duplicated (exactly 2x) */}
-        <div className="marquee-container w-full py-4 bg-[#FBF6F5]">
-          <div className="marquee-track flex gap-12 sm:gap-16 items-center">
-            {TRUST_LOGOS.concat(TRUST_LOGOS).map((logo, i) => (
-              <div
-                key={i}
-                className="marquee-logo mx-4 text-lg sm:text-xl font-bold text-[#5A5252]/70 hover:text-[#C41E3A] transition-all cursor-pointer select-none"
-              >
-                ✨ {logo.logoText}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="marquee-container w-full py-6 bg-[#FBF6F5] overflow-hidden relative">
+  {/* Fade edges so logos appear to scroll in/out smoothly rather than cutting off abruptly */}
+  <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#FBF6F5] to-transparent z-10"></div>
+  <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#FBF6F5] to-transparent z-10"></div>
 
+  <div className="marquee-track flex gap-12 sm:gap-16 items-center w-max">
+    {TRUST_LOGOS.concat(TRUST_LOGOS).map((logo, i) => (
+     <div
+  key={i}
+  className="marquee-logo shrink-0 flex items-center justify-center px-6 h-28 sm:h-32 opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer select-none"
+>
+        <img
+          src={logo.logoSrc}
+          alt={logo.logoText}
+          className="h-full w-auto max-w-[140px] sm:max-w-[180px] object-contain"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+</section>
 
       {/* 9. Meet the Team - Stacking Card Deck Reveal */}
       <section
