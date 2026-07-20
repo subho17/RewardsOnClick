@@ -90,7 +90,7 @@ export const PROCESS_STEPS: StepItem[] = [
 ];
 
 export const WHY_US_DATA: USPItem[] = [
-  { id: "why-catalog", title: "Vetted Brand Catalog", description: "Access 1,000+ top-tier national brands, instant digital e-vouchers, and physical gifts.", emoji: "🎁" },
+  { id: "why-catalog", title: "Vetted Brand Catalog", description: "Access 100+ top-tier national brands, instant digital e-vouchers, and physical gifts.", emoji: "🎁" },
   { id: "why-delivery", title: "Pan-India Delivery", description: "Reliable physical shipment dispatch and near-instant digital delivery across all Indian pin codes.", emoji: "📍" },
   { id: "why-report", title: "Real-Time Reporting", description: "Audit points balances, download active vouchers, and export monthly spend spreadsheets dynamically.", emoji: "📊" }
 ];

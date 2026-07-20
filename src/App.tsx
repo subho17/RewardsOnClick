@@ -26,7 +26,7 @@ import {
   WHY_US_DATA,
   TEAM_DATA
 } from "./data";
-const heroVideoSrc = "/assets/generate_hero_section_video_fo.mp4";
+const heroVideoSrc = "/assets/hero-video2.mp4";
 
 export default function App() {
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -568,7 +568,7 @@ export default function App() {
         }
       });
 
-      // GiftsOnClick dark band: soft scale reveal
+      // Gifts-On-Click dark band: soft scale reveal
       const scaleReveals = document.querySelectorAll('.reveal-goc-band');
       scaleReveals.forEach((el) => {
         gsap.set(el, { opacity: 0, scale: 0.96 });
@@ -881,7 +881,7 @@ export default function App() {
           <a href="#hero" className="flex items-center">
             <img
               src="/goclogo.png"
-              alt="GiftsOnClick"
+              alt="Gifts-On-Click"
               className="h-16 md:h-20 w-auto object-contain scale-[1.5] md:scale-[1.8] origin-left"
             />
           </a>
@@ -1136,11 +1136,11 @@ export default function App() {
           {/* Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            {/* GiftsOnClick */}
+            {/* Gifts-On-Click */}
             <div className="bg-white rounded-3xl border border-[#F0E2E0] p-10 shadow-sm">
 
               <div className="h-33 mb-">
-                <img src="/logo.jpg(1).jpeg" alt="GiftsOnClick Logo" className="h-full w-auto object-contain" />
+                <img src="/logo.jpg(1).jpeg" alt="Gifts-On-Click Logo" className="h-full w-auto object-contain" />
               </div>
 
               <h3 className="text-3xl font-bold text-[#1A1414] mb-4">
@@ -1189,27 +1189,24 @@ export default function App() {
               </div>
 
               <a
-                href="https://www.giftsonclick.in/"
+                href="https://www.Gifts-On-Click.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#C41E3A] text-white px-7 py-4 rounded-full font-semibold hover:bg-[#8C1327]"
               >
-                Visit GiftsOnClick
+                Visit Gifts-On-Click
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
 
             </div>
 
-            {/* RewardsOnClick */}
+            {/* Reward-On-Click */}
             <div className="bg-white rounded-3xl border border-[#F0E2E0] p-10 shadow-sm">
 
               <div className="h-24 mb-8">
-                <img src="/assets/rocbg.png" alt="RewardsOnClick Logo" className="h-full w-auto object-contain" />
+                <img src="/assets/rocbg.png" alt="Reward-On-Click Logo" className="h-full w-auto object-contain" />
               </div>
 
-              <h3 className="text-3xl font-bold text-[#1A1414] mb-4">
-                Rewards-On-Click
-              </h3>
 
               <p className="text-[#5A5252] leading-8 mb-8">
                 A complete loyalty and rewards management platform for businesses to
@@ -1253,12 +1250,12 @@ export default function App() {
               </div>
 
               <a
-                href="https://rewardsonclick.in/"
+                href="https://Reward-On-Click.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-[#1A1414] text-white px-7 py-4 rounded-full font-semibold hover:bg-black"
               >
-                Visit RewardsOnClick
+                Visit Reward-On-Click
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
 
@@ -1291,11 +1288,11 @@ export default function App() {
               Our Origin & DNA
             </span>
             <h2 className="text-4xl md:text-5xl font-heading text-[#1A1414] mb-6 max-w-xl">
-              Born from GiftsOnClick. Powered for corporate scale.
+              Born from Gifts-On-Click. Powered for corporate scale.
             </h2>
             <div className="space-y-6 text-[#5A5252] text-base md:text-lg leading-relaxed font-body">
               <p>
-                <strong>GiftsOnClick</strong> is India's corporate gifting platform, built to solve a
+                <strong>Gifts-On-Click</strong> is India's corporate gifting platform, built to solve a
                 simple problem for HR, sales, and procurement teams:{" "}
                 <span className="text-[#1A1414] font-semibold">
                   finding the right gift, at scale, without the back-and-forth.
@@ -1309,19 +1306,13 @@ export default function App() {
                 Jones — all sourced, curated, and fulfilled through one platform.
               </p>
               <p className="italic text-[#C41E3A]">
-                Trusted by teams at HUL, Vodafone Idea, SBI, Mahindra, Asian Paints, and Glenmark for
-                employee recognition, channel incentives, and festive gifting.
+                Trusted by teams at Samsung, Philips, Jack & Jones, Portronics, Nasher Miles, LG
+                Clients: HUL, Orient Electric, Mahindra & Mahindra, VIL, Asian Paints, SBI
               </p>
             </div>
 
             <div className="mt-8">
-              <a
-                href="#programs"
-                className="btn-pill magnetic-btn inline-flex items-center text-white bg-[#C41E3A] hover:bg-[#8C1327] px-6 py-3.5 font-bold text-sm tracking-wide transition-all"
-                id="about-cta"
-              >
-                Learn More About Our Programs <ChevronRight className="w-4 h-4 ml-1" />
-              </a>
+
             </div>
           </div>
 
@@ -1523,7 +1514,7 @@ export default function App() {
       </section>
 
 
-      {/* 7. Why RewardsOnClick (6 USPs) */}
+      {/* 7. Why Reward-On-Click (6 USPs) */}
       <section
         id="why-us"
         className="reveal-container py-24 md:py-32 bg-[#FBF6F5] px-6 md:px-12 lg:px-24 border-y border-[#F0E2E0]"
@@ -1576,28 +1567,28 @@ export default function App() {
         </div>
 
         {/* Marquee Track Duplicated (exactly 2x) */}
-      <div className="marquee-container w-full py-6 bg-[#FBF6F5] overflow-hidden relative">
-  {/* Fade edges so logos appear to scroll in/out smoothly rather than cutting off abruptly */}
-  <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#FBF6F5] to-transparent z-10"></div>
-  <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#FBF6F5] to-transparent z-10"></div>
+        <div className="marquee-container w-full py-6 bg-[#FBF6F5] overflow-hidden relative">
+          {/* Fade edges so logos appear to scroll in/out smoothly rather than cutting off abruptly */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#FBF6F5] to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#FBF6F5] to-transparent z-10"></div>
 
-  <div className="marquee-track flex gap-12 sm:gap-16 items-center w-max">
-    {TRUST_LOGOS.concat(TRUST_LOGOS).map((logo, i) => (
-     <div
-  key={i}
-  className="marquee-logo shrink-0 flex items-center justify-center px-6 h-28 sm:h-32 opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer select-none"
->
-        <img
-          src={logo.logoSrc}
-          alt={logo.logoText}
-          className="h-full w-auto max-w-[140px] sm:max-w-[180px] object-contain"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-    ))}
-  </div>
-</div>
-</section>
+          <div className="marquee-track flex gap-12 sm:gap-16 items-center w-max">
+            {TRUST_LOGOS.concat(TRUST_LOGOS).map((logo, i) => (
+              <div
+                key={i}
+                className="marquee-logo shrink-0 flex items-center justify-center px-6 h-28 sm:h-32 opacity-90 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-pointer select-none"
+              >
+                <img
+                  src={logo.logoSrc}
+                  alt={logo.logoText}
+                  className="h-full w-auto max-w-[140px] sm:max-w-[180px] object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 9. Meet the Team - Stacking Card Deck Reveal */}
       <section
@@ -1612,7 +1603,7 @@ export default function App() {
             Organizational DNA
           </span>
           <h2 className="reveal text-4xl md:text-5xl font-heading text-[#1A1414] mb-6 max-w-xl mx-auto">
-            Meet the minds behind RewardsOnClick
+            Meet the minds behind Reward-On-Click
           </h2>
           <p className="reveal text-[#5A5252] text-lg max-w-lg mx-auto font-body">
             A dedicated team of technology, operation, and corporate servicing experts committed to your scale.
@@ -1697,7 +1688,7 @@ export default function App() {
 
           <img
             src="/assets/team-photo.jpg"
-            alt="RewardsOnClick Team"
+            alt="Reward-On-Click Team"
             className="w-full h-auto object-cover"
           />
 
@@ -1708,7 +1699,7 @@ export default function App() {
       <br>
       </br>
 
-      {/* 10. About GiftsOnClick Parent Brand Connection */}
+      {/* 10. About Gifts-On-Click Parent Brand Connection */}
       <section className="reveal-container py-24 bg-gradient-to-br from-[#1A1414] via-[#3d0f17] to-[#1A1414] text-white px-6 md:px-12 lg:px-24 relative overflow-hidden">
         {/* Abstract background graphics */}
         <div className="goc-blob1-wrap absolute top-0 right-0 w-[300px] h-[300px] pointer-events-none">
@@ -1723,20 +1714,20 @@ export default function App() {
             Our Foundation
           </span>
           <h2 className="text-3xl md:text-5xl font-heading text-white mb-6 leading-tight max-w-2xl mx-auto">
-            15+ Years of Corporate Gifting Excellence via GiftsOnClick
+            15+ Years of Corporate Gifting Excellence via Gifts-On-Click
           </h2>
           <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto font-body">
-            RewardsOnClick inherits its extensive supplier network, robust verification standards, and customer-first commitment directly from its parent brand, <strong>GiftsOnClick.in</strong>. Over the last decade and a half, we have delivered corporate delight to over half a million employees and client networks nationwide.
+            Reward-On-Click inherits its extensive supplier network, robust verification standards, and customer-first commitment directly from its parent brand, <strong>Gifts-On-Click.in</strong>. Over the last decade and a half, we have delivered corporate delight to over half a million employees and client networks nationwide.
           </p>
           <div>
             <a
-              href="https://www.giftsonclick.in/"
+              href="https://www.Gifts-On-Click.in/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill magnetic-btn inline-flex items-center bg-[#C41E3A] hover:bg-[#8C1327] text-white px-8 py-4 font-bold text-sm tracking-wide transition-all"
               id="parent-site-link"
             >
-              Visit GiftsOnClick.in <ExternalLink className="w-4 h-4 ml-2" />
+              Visit Gifts-On-Click.in <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
         </div>
@@ -1773,8 +1764,8 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-[#1A1414] uppercase tracking-wider mb-1 font-sans">Email Inquiries</h4>
-                    <a href="mailto:info@giftsonclick.in" className="text-base font-semibold text-[#C41E3A] hover:underline font-body">
-                      info@giftsonclick.in
+                    <a href="mailto:info@Gifts-On-Click.in" className="text-base font-semibold text-[#C41E3A] hover:underline font-body">
+                      info@Gifts-On-Click.in
                     </a>
                   </div>
                 </div>
@@ -1812,7 +1803,7 @@ export default function App() {
                   <div>
                     <h4 className="text-xs font-bold text-[#1A1414] uppercase tracking-wider mb-1 font-sans">Working Hours</h4>
                     <p className="text-sm text-[#5A5252] font-body">
-                      Monday to Saturday • 9:30 AM to 6:30 PM
+                      Monday to Saturday • 9:30 AM to 6:00 PM
                     </p>
                   </div>
                 </div>
@@ -1826,8 +1817,8 @@ export default function App() {
               <div className="overflow-hidden rounded-3xl border border-[#F0E2E0] shadow-lg">
 
                 <iframe
-                  title="A Square Technologies"
-                  src="https://www.google.com/maps?q=A+SQUARE+TECHNOLOGIES,+1511,+First+Floor,+JLPL+Industrial+Park,+Sector+82,+Mohali,+Punjab+160055&output=embed"
+                  title="Gifts-On-Click | Corporate Gifting"
+                  src="https://www.google.com/maps?q=30.6506192,76.7342834&z=17&output=embed"
                   width="100%"
                   height="550"
                   style={{ border: 0 }}
@@ -1869,11 +1860,11 @@ export default function App() {
                 Rewards<span className="text-[#C41E3A]">OnClick</span><span className="text-xs text-[#C9A24B] align-super font-medium ml-0.5">.in</span>
               </a>
               <p className="text-sm text-gray-400 max-w-sm font-body leading-relaxed">
-                Premium corporate rewards and recognition engine powered by 15+ years of trusted B2B gifting experience via GiftsOnClick.in.
+                Premium corporate rewards and recognition engine powered by 15+ years of trusted B2B gifting experience via Gifts-On-Click.in.
               </p>
 
               <div className="mt-6 text-xs text-[#C9A24B] font-bold uppercase tracking-wider">
-                A GiftsOnClick Group Company
+                A Gifts-On-Click Group Company
               </div>
             </div>
 
@@ -1884,7 +1875,7 @@ export default function App() {
                 <li><a href="#about" className="hover:text-[#C41E3A] transition-colors">About Our Origin</a></li>
                 <li><a href="#industries" className="hover:text-[#C41E3A] transition-colors">Sectors Supported</a></li>
                 <li><a href="#team" className="hover:text-[#C41E3A] transition-colors">Meet Our Team</a></li>
-                <li><a href="https://www.giftsonclick.in" target="_blank" rel="noreferrer" className="hover:text-[#C41E3A] transition-colors inline-flex items-center gap-1">Parent Brand <ExternalLink className="w-3 h-3" /></a></li>
+                <li><a href="https://www.Gifts-On-Click.in" target="_blank" rel="noreferrer" className="hover:text-[#C41E3A] transition-colors inline-flex items-center gap-1">Parent Brand <ExternalLink className="w-3 h-3" /></a></li>
               </ul>
             </div>
 
@@ -1903,7 +1894,7 @@ export default function App() {
 
           {/* Copyright & Disclaimer Line */}
           <div className="border-t border-[#F0E2E0]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-body">
-            <p>© 2026 RewardsOnClick.in. All Rights Reserved.</p>
+            <p>© 2026 Reward-On-Click.in. All Rights Reserved.</p>
             <p>Designed for premium B2B enterprises. Designed by <a href="https://www.sevenwealth.org/" target="_blank" rel="noreferrer" className="text-white hover:text-[#C41E3A] underline">sevenwealth.org</a></p>
           </div>
 
