@@ -1687,7 +1687,7 @@ export default function App() {
         <div className="overflow-hidden rounded-3xl border border-[#F0E2E0] shadow-lg bg-white">
 
           <img
-            src="/assets/team-photo.jpg"
+            src="/Team Photo(1).jpeg"
             alt="Reward-On-Click Team"
             className="w-full h-auto object-cover"
           />
